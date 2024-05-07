@@ -10,7 +10,7 @@ function App() {
   return (<>
     <Description />
     <Options reviews={reviews} />
-    <Feedback/>
+    <Feedback reviews={reviews}/>
   </>)
 }
 

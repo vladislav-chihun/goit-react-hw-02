@@ -1,9 +1,4 @@
 export default function Options({ good, neutral, bad }) {
-    const reviews = {
-	good: {good},
-	neutral: {neutral},
-	bad: {bad}
-}
 
     return (<>
         <ul>
