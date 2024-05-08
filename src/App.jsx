@@ -1,18 +1,25 @@
+import { useState } from "react"
 import Description from './components/Description/Descriptions'
-import Options from "./components/Options/Options.1"
+import Options from "./components/Options/Options"
 import Feedback from './components/Feedback/Feedback'
+
 function App() {
-  const reviews = {
-	good: 0,
-	neutral: 0,
-	bad: 0
+  const [feedbackType, setFeedbackType] = useState({ good: 0, neutral: 0, bad: 0 })
+
+  function updateFeedback(type) {
+    setFeedbackType(prevState => ({
+      ...prevState,
+      [type]: prevState[type] + 1
+    }));
   }
-  const 
-  return (<>
-    <Description />
-    <Options reviews={reviews} />
-    <Feedback reviews={reviews}/>
-  </>)
+
+  return (
+    <>
+      <Description />
+      <Options updateFeedback={updateFeedback} />
+      <Feedback feedbackType={feedbackType} />
+    </>
+  )
 }
 
 export default App
