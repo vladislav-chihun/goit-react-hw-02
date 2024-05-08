@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Options({ updateFeedback }) {
 
-  function handleClick(type) {
-    updateFeedback(type);
+  function handleClick(feedbackType) {
+    updateFeedback(feedbackType);
   }
 
   return (

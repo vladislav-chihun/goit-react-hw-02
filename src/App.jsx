@@ -6,10 +6,10 @@ import Feedback from './components/Feedback/Feedback'
 function App() {
   const [feedbackType, setFeedbackType] = useState({ good: 0, neutral: 0, bad: 0 })
 
-  function updateFeedback(type) {
+  function updateFeedback(feedbackType) {
     setFeedbackType(prevState => ({
       ...prevState,
-      [type]: prevState[type] + 1
+      [feedbackType]: prevState[feedbackType] + 1
     }));
   }
 
