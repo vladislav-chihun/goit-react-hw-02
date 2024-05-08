@@ -1,5 +1,5 @@
 
-export default function Feedback({ good, neutral, bad }) {
+export default function Feedback({ reviews:{good, neutral, bad} }) {
     return (<>
         <p><span>{good}</span></p>
         <p><span>{neutral}</span></p>
