@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <Description />
-      <Options updateFeedback={updateFeedback} />
+      <Options updateFeedback={updateFeedback} setFeedbackType={setFeedbackType} totalFeedback={totalFeedback} />
       <Feedback feedbackType={feedbackType} totalFeedback={totalFeedback} />
       <Notification totalFeedback={totalFeedback} />
     </>
