@@ -11,9 +11,9 @@ export default function Options({ updateFeedback, setFeedbackType, totalFeedback
 
   return (
     <ul className={css.reviewsList}>
-      <li><button onClick={() => handleClick('good')}>Good</button></li>
-      <li><button onClick={() => handleClick('neutral')}>Neutral</button></li>
-      <li><button onClick={() => handleClick('bad')}>Bad</button></li>
+      <li><button className= {css.reviewBtn} onClick={() => handleClick('good')}>Good</button></li>
+      <li><button className= {css.reviewBtn} onClick={() => handleClick('neutral')}>Neutral</button></li>
+      <li><button className= {css.reviewBtn} onClick={() => handleClick('bad')}>Bad</button></li>
       {totalFeedback !==0 && <li><button onClick={handleReset}>Reset</button></li>}
     </ul>
   );

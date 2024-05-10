@@ -1,6 +1,6 @@
-p {
+.reviewsInfo {
   margin: 10px 0px;
 }
-span {
+.reviewValue {
   margin-left: 5px;
 }
