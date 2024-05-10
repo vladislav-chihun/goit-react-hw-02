@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 export default function Options({ updateFeedback, setFeedbackType, totalFeedback }) {
 
   function handleClick(feedbackType) {
