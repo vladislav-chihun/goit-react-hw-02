@@ -1,0 +1,10 @@
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  gap: 3px;
+}
+button {
+  padding: 3px 4px;
+}

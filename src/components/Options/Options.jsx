@@ -1,3 +1,4 @@
+import css from "./Options.module.css"
 export default function Options({ updateFeedback, setFeedbackType, totalFeedback }) {
 
   function handleClick(feedbackType) {
