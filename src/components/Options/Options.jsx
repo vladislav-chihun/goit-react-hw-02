@@ -4,10 +4,7 @@ export default function Options({ updateFeedback, setFeedbackType, totalFeedback
   function handleClick(feedbackType) {
     updateFeedback(feedbackType);
   }
-  function handleReset() {
-    setFeedbackType({ good: 0, neutral: 0, bad: 0 });
-    localStorage.setItem("reviews", JSON.stringify({ good: 0, neutral: 0, bad: 0 }))
-  }
+  
 
   return (
     <ul>
