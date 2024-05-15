@@ -1,13 +1,10 @@
 import css from "./Options.module.css"
-export default function Options({ updateFeedback, setFeedbackType, totalFeedback }) {
+export default function Options({ updateFeedback, handleReset, totalFeedback }) {
 
   function handleClick(feedbackType) {
     updateFeedback(feedbackType);
   }
-  function handleReset() {
-    setFeedbackType({ good: 0, neutral: 0, bad: 0 });
-    localStorage.setItem("reviews", JSON.stringify({ good: 0, neutral: 0, bad: 0 }))
-  }
+  
 
   return (
     <ul className={css.reviewsList}>

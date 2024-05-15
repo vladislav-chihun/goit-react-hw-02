@@ -23,18 +23,21 @@ function App() {
   }
   
   useEffect(() => {
-    if (totalFeedback !== 0) {
-      localStorage.setItem("reviews", JSON.stringify(feedbackType))
-    }
+    localStorage.setItem("reviews", JSON.stringify(feedbackType))
     
-  },[feedbackType,totalFeedback])
+  }, [feedbackType, totalFeedback])
+  const positiveFeedback = `${Math.round((good / totalFeedback) * 100)}%`
+  function handleReset() {
+    setFeedbackType({ good: 0, neutral: 0, bad: 0 });
+  }
+
 
   return (
     <>
       <Description />
-      <Options updateFeedback={updateFeedback} setFeedbackType={setFeedbackType} totalFeedback={totalFeedback} />
-      <Feedback feedbackType={feedbackType} totalFeedback={totalFeedback} />
-      <Notification totalFeedback={totalFeedback} />
+      <Options updateFeedback={updateFeedback} setFeedbackType={setFeedbackType} totalFeedback={totalFeedback} handleReset={handleReset} />
+      {totalFeedback != 0 && <Feedback feedbackType={feedbackType} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} />}
+      { totalFeedback === 0 && <Notification />}
     </>
   )
 }
