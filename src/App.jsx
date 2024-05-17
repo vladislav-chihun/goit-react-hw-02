@@ -41,7 +41,7 @@ function App() {
   return (
     <>
       <Description />
-      <Options setFeedbackType={setFeedbackType} totalFeedback={totalFeedback} handleReset={handleReset} handleClick={handleClick} />
+      <Options totalFeedback={totalFeedback} handleReset={handleReset} handleClick={handleClick} />
       {totalFeedback != 0 && <Feedback feedbackType={feedbackType} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} />}
       { totalFeedback === 0 && <Notification />}
     </>
