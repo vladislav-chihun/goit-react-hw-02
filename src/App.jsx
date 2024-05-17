@@ -22,6 +22,12 @@ function App() {
     }));
   }
   
+  function handleClick(feedbackType) {
+    updateFeedback(feedbackType);
+  }
+
+
+  
   useEffect(() => {
     localStorage.setItem("reviews", JSON.stringify(feedbackType))
     
@@ -35,7 +41,7 @@ function App() {
   return (
     <>
       <Description />
-      <Options updateFeedback={updateFeedback} setFeedbackType={setFeedbackType} totalFeedback={totalFeedback} handleReset={handleReset} />
+      <Options setFeedbackType={setFeedbackType} totalFeedback={totalFeedback} handleReset={handleReset} handleClick={handleClick} />
       {totalFeedback != 0 && <Feedback feedbackType={feedbackType} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} />}
       { totalFeedback === 0 && <Notification />}
     </>

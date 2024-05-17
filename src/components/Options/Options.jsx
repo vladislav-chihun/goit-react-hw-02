@@ -1,9 +1,7 @@
 import css from "./Options.module.css"
-export default function Options({ updateFeedback, handleReset, totalFeedback }) {
+export default function Options({ handleReset, totalFeedback,handleClick }) {
 
-  function handleClick(feedbackType) {
-    updateFeedback(feedbackType);
-  }
+  
   
 
   return (
