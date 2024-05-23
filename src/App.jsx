@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem("reviews", JSON.stringify(feedbackType))
     
-  }, [feedbackType, totalFeedback])
+  }, [feedbackType])
   const positiveFeedback = `${Math.round((good / totalFeedback) * 100)}%`
   function handleReset() {
     setFeedbackType({ good: 0, neutral: 0, bad: 0 });
